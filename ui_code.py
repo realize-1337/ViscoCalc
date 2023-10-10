@@ -113,6 +113,7 @@ class Ui_Dialog(object):
         font.setWeight(75)
         self.pushButton.setFont(font)
         self.pushButton.setObjectName("pushButton")
+        self.pushButton.clicked.connect(self.buttonPressed)
         self.progressBar = QtWidgets.QProgressBar(parent=Dialog)
         self.progressBar.setGeometry(QtCore.QRect(20, 390, 451, 23))
         self.progressBar.setProperty("value", 0)
@@ -139,6 +140,8 @@ class Ui_Dialog(object):
         self.progressBar.setFormat(_translate("Dialog", "%p%"))
         self.label_4.setText(_translate("Dialog", "Es werden XY wt-% Glycerin benötigt"))
 
+    def buttonPressed(self):
+        print('Test')
 
 if __name__ == "__main__":
     import sys
