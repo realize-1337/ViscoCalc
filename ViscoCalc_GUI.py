@@ -27,9 +27,10 @@ class GUI(QWidget):
         print(my_target, temp)
 
         calc = ca.Calculator(temp, my_target)
-        result = "%.2f" % (calc.solve()*100)
-        print(result)
-        output = f'Für eine Viskosität von {"%.0f" % my_target} mPa s bei {temp} °C <br> werden <b>{result} wt-% </b> Glycerin benötigt.'
+        try: 
+            result = "%.2f" % (calc.solve()*100)
+            output = f'Für eine Viskosität von {"%.0f" % my_target} mPa s bei {temp} °C <br> werden <b>{result} wt-% </b> Glycerin benötigt.'
+        except: output = 'Diese Kombination aus Viskosität und <br> Temperatur ist nicht möglich!'
         self.ui.label_2.setText(output)
 
     def infobox(self):
