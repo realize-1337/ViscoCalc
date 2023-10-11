@@ -35,7 +35,7 @@ class GUI(QWidget):
 
     def infobox(self):
         newbox = QMessageBox()
-        newbox.setText('<br> <b> Viskosität Berechnung für Glycerin-Wasser-Mischungen zwischen 0 und 100 °C </b><br>Basierend auf Cheng, N.-S. (2008). "Formula for the viscosity of a glycerol− water mixture." Industrial & Engineering Chemistry Research 47(9): 3285-3288. <br><br> © David Märker, 2023')
+        newbox.setText('<br> <b> Viskositätsberechnung für Glycerin-Wasser-Mischungen zwischen 0 und 100 °C </b><br>Basierend auf Cheng, N.-S. (2008). "Formula for the viscosity of a glycerol− water mixture." Industrial & Engineering Chemistry Research 47(9): 3285-3288. <br><br> © David Märker, 2023')
         newbox.setWindowTitle('Infos')
         newbox.setTextFormat(QtCore.Qt.TextFormat.RichText)
         newbox.setWindowIcon(QtGui.QIcon('assets/VC_Logo.ico'))
