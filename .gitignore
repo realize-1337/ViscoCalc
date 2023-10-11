@@ -2,3 +2,4 @@
 /build
 /GUI.ui
 /__pycache__
+*.exe
